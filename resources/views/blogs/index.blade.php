@@ -62,6 +62,16 @@
                                         <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
                                     </form>
                                 @endif
+
+                                @if ($blog->owner_id === auth()->id())
+                                    <a href="{{ route('posts.create', ['blog' => $blog->id]) }}" class="btn btn-success btn-sm">Create Post</a>
+                                    <a href="{{ route('blogs.edit', $blog) }}" class="btn btn-warning btn-sm">Edit Blog</a>
+                                    <form action="{{ route('blogs.destroy', $blog) }}" method="POST" class="d-inline-block">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm">Delete Blog</button>
+                                    </form>
+                                @endif
                             </div>
                         </div>
                     </div>

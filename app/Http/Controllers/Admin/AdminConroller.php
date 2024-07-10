@@ -64,14 +64,6 @@ class AdminConroller extends Controller
 
         $post = Post::findOrFail($id);
 
-        if($request->has('likes')) {
-            $post->likes = $request->input('likes');
-        }
-
-        if($request->has('views')) {
-            $post->views = $request->input('views');
-        }
-
         $post->update($validatedData);
 
         return redirect()->route('admin.index');

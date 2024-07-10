@@ -20,7 +20,9 @@
                 <label for="blog_id" class="form-label">Blog</label>
                 <select name="blog_id" id="blog_id" class="form-control" required>
                     @foreach ($blogs as $blog)
-                        <option value="{{ $blog->id }}">{{ $blog->title }}</option>
+                        @if ($blog->owner_id === auth()->id())
+                            <option value="{{ $blog->id }}">{{ $blog->title }}</option>
+                        @endif
                     @endforeach
                 </select>
             </div>

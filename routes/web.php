@@ -57,6 +57,7 @@ Route::middleware('auth')->group(function () {
     Route::put('/blogs/{blog}', [BlogController::class, 'update'])->name('blogs.update');
     Route::delete('/blogs/{blog}', [BlogController::class, 'destroy'])->name('blogs.destroy');
     Route::post('/blogs/{blog}/add-author', [BlogController::class, 'addAuthor'])->name('blogs.addAuthor');
+    Route::delete('/blogs/{blog}/remove-author/{authorId}', [BlogController::class, 'removeAuthor'])->name('blogs.removeAuthor');
 });
 
 // Post

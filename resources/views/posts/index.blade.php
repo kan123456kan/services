@@ -41,8 +41,6 @@
                 </div>
             </div>
         </form>
-
-        <a href="{{ route('posts.create') }}" class="btn btn-primary mb-4">Create Post</a>
         @foreach ($posts as $post)
             <div class="card post-card shadow-sm">
                 <img src="https://via.placeholder.com/800x200" class="card-img-top post-img" alt="{{ $post->title }}">
@@ -53,7 +51,7 @@
                     <p class="card-text">{{ Str::limit($post->body, 150) }}</p>
                     <div class="post-meta d-flex justify-content-between align-items-center">
                         <div>
-                            <span class="me-3"><i class="bi bi-heart-fill text-danger"></i> {{ $post->likes }}</span>
+                            <span class="me-3"><i class="bi bi-heart-fill text-danger"></i> {{ $post->likes()->count() }}</span>
                             <span class="me-3"><i class="bi bi-eye-fill"></i> {{ $post->views }}</span>
                         </div>
                         <small class="text-muted">{{ $post->created_at->format('M d, Y') }}</small>

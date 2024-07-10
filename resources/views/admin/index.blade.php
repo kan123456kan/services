@@ -23,7 +23,7 @@
                             <tr>
                                 <th scope="col">Title</th>
                                 <th scope="col">Description</th>
-                                <th scope="col">Owner ID</th>
+                                <th scope="col">Owner</th>
                                 <th scope="col">Actions</th>
                             </tr>
                         </thead>
@@ -58,8 +58,8 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Author ID</th>
-                                <th scope="col">Blog ID</th>
+                                <th scope="col">Author</th>
+                                <th scope="col">Blog</th>
                                 <th scope="col">Title</th>
                                 <th scope="col">Body</th>
                                 <th scope="col">Is Published</th>
@@ -103,8 +103,8 @@
                     <table class="table table-bordered table-striped">
                         <thead>
                             <tr>
-                                <th scope="col">Post ID</th>
-                                <th scope="col">Author ID</th>
+                                <th scope="col">Post</th>
+                                <th scope="col">Author</th>
                                 <th scope="col">Body</th>
                                 <th scope="col">Actions</th>
                             </tr>
